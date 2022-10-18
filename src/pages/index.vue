@@ -1,34 +1,42 @@
 <script setup lang="ts">
-import domToImage from 'dom-to-image'
+// import domToImage from 'dom-to-image'
+// import html2canvas from 'html2canvas'
 import printJS from 'print-js'
 
 async function print() {
-  const dataUrl = await domToImage.toPng(document.querySelector('#print-container')!)
+  // const dataUrl = await domToImage.toPng(document.querySelector('#print-container')!)
 
   printJS({
-    printable: dataUrl,
-    type: 'image',
-    imageStyle: 'width: 100%;'
+    printable: 'print-container',
+    type: 'html',
+    style: 'div { word-break: break-all; font-size: 12px; zoom: 0.95; font-weight: 400; }',
+    header: '冠山示范型居家养老服务中心消费结账单',
+    headerStyle: 'font-size: 12px;',
+    scanStyles: false
   })
+
+  // html2canvas(document.querySelector('#print-container')!, {
+  //   scale: 50
+  // }).then((canvas) => {
+  //   const dataUrl = canvas.toDataURL('image/png')
+  //   printJS({
+  //     printable: dataUrl,
+  //     type: 'image',
+  //     imageStyle: 'width: 100%;'
+  //   })
+  // })
 }
 </script>
 
 <template>
   <div class="p-5 mx-auto my-20 w-100 border text-center">
-    <div id="print-container" class="inline-block px-4mm py-10mm w-58mm text-left bg-red-200 text-12px">
-      <p>冠山示范型居家养老服务中心消费结账单</p>
-      <p class="mt-4mm">
-        姓名：张三
-      </p>
-      <p>单号：123442342421423421342</p>
-      <p>收营员：李四</p>
-      <p>结账时间：2022-10-20</p>
-      <p class="mt-4mm">
-        消费金额：67元
-      </p>
-      <p class="mt-4mm">
-        账户余额：1000元
-      </p>
+    <div id="print-container" class="w-50mm">
+      <div>姓名：张三</div>
+      <div>单号：123442342421442单号：123442342421442</div>
+      <div>收营员：李四</div>
+      <div>结账时间：2022-10-20</div>
+      <div>消费金额：67元</div>
+      <div> 账户余额：1000元</div>
     </div>
 
     <hr class="my-6">

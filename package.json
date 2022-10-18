@@ -16,6 +16,7 @@
     "@vueuse/core": "^9.1.0",
     "@vueuse/head": "^0.7.12",
     "dom-to-image": "^2.6.0",
+    "html2canvas": "^1.4.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.17",
     "print-js": "^1.6.0",
