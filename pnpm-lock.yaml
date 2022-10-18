@@ -6,6 +6,7 @@ specifiers:
   '@hongbusi/eslint-config': ^0.3.4
   '@hongbusi/icons-svg': ^0.0.5
   '@iconify/utils': ^2.0.1
+  '@types/dom-to-image': ^2.6.4
   '@types/node': ^18.7.18
   '@types/nprogress': ^0.2.0
   '@unocss/reset': ^0.45.22
@@ -13,11 +14,13 @@ specifiers:
   '@vueuse/core': ^9.1.0
   '@vueuse/head': ^0.7.12
   critters: ^0.0.16
+  dom-to-image: ^2.6.0
   eslint: ^8.23.1
   husky: ^8.0.1
   lint-staged: ^13.0.3
   nprogress: ^0.2.0
   pinia: ^2.0.17
+  print-js: ^1.6.0
   typescript: ^4.8.3
   unocss: ^0.45.8
   unplugin-auto-import: ^0.11.2
@@ -35,8 +38,10 @@ dependencies:
   '@unocss/reset': 0.45.22
   '@vueuse/core': 9.1.0_vue@3.2.39
   '@vueuse/head': 0.7.12_vue@3.2.39
+  dom-to-image: 2.6.0
   nprogress: 0.2.0
   pinia: 2.0.17_arz4dztosvwy2ghjrlh2wdhejm
+  print-js: 1.6.0
   vue: 3.2.39
   vue-router: 4.1.5_vue@3.2.39
 
@@ -45,6 +50,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.1.0
   '@hongbusi/eslint-config': 0.3.4_irgkl5vooow2ydyo6aokmferha
   '@iconify/utils': 2.0.1
+  '@types/dom-to-image': 2.6.4
   '@types/node': 18.7.18
   '@types/nprogress': 0.2.0
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.8+vue@3.2.39
@@ -574,6 +580,10 @@ packages:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
       '@types/ms': 0.7.31
+    dev: true
+
+  /@types/dom-to-image/2.6.4:
+    resolution: {integrity: sha512-UddUdGF1qulrSDulkz3K2Ypq527MR6ixlgAzqLbxSiQ0icx0XDlIV+h4+edmjq/1dqn0KgN0xGSe1kI9t+vGuw==}
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -1778,6 +1788,10 @@ packages:
       domhandler: 4.3.1
       entities: 2.2.0
     dev: true
+
+  /dom-to-image/2.6.0:
+    resolution: {integrity: sha512-Dt0QdaHmLpjURjU7Tnu3AgYSF2LuOmksSGsUcE6ItvJoCWTBEmiMXcqBdNSAm9+QbbwD7JMoVsuuKX6ZVQv1qA==}
+    dev: false
 
   /domelementtype/2.3.0:
     resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
@@ -4062,6 +4076,10 @@ packages:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
     dev: true
+
+  /print-js/1.6.0:
+    resolution: {integrity: sha512-BfnOIzSKbqGRtO4o0rnj/K3681BSd2QUrsIZy/+WdCIugjIswjmx3lDEZpXB2ruGf9d4b3YNINri81+J0FsBWg==}
+    dev: false
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
