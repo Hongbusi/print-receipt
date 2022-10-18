@@ -5,7 +5,11 @@ import printJS from 'print-js'
 async function print() {
   const dataUrl = await domToImage.toPng(document.querySelector('#print-container')!)
 
-  printJS(dataUrl, 'image')
+  printJS({
+    printable: dataUrl,
+    type: 'image',
+    imageStyle: 'width: 100%;'
+  })
 }
 </script>
 
