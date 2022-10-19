@@ -8,14 +8,17 @@ const print = new Print({
     { type: 'blank-line' },
     {
       type: 'list',
-      title: '这是一个测试列表',
+      title: '点餐列表',
       content: [
-        ['这是第一个', '这是第二个', '这是第三个'],
-        ['这是第一个', '这是第二个', '这是第三个']
+        ['红烧肉', '10元', '*1'],
+        ['红烧肉', '100元', '*1'],
+        ['红烧肉', '10元', '*1'],
+        ['红烧肉', '10元', '*1']
       ]
     },
-    { type: 'text', content: '这是一个测试' },
-    { type: 'text', content: '这是一个测试' },
+    { type: 'blank-line' },
+    { type: 'text', content: '消费金额：100 元' },
+    { type: 'text', content: '余额：1000 元' },
     { type: 'text', content: '这是一个测试' }
   ]
 })

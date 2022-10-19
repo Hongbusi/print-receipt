@@ -5,7 +5,6 @@ export default class Print {
 
   constructor(options) {
     this.options = options
-
     this.generate()
   }
 
@@ -44,15 +43,14 @@ export default class Print {
 
   genList(title, content) {
     this.genText(title)
-    this.push('<ul>')
 
     content.forEach((i) => {
+      this.push('<ul>')
       i.forEach((j) => {
         this.push(`<li>${j}</li>`)
       })
+      this.push('</ul>')
     })
-
-    this.push('</ul>')
   }
 
   genBlankLine() {
@@ -80,7 +78,7 @@ export default class Print {
     printJS({
       printable: 'print-container',
       type: 'html',
-      style: 'div { word-break: break-all; font-size: 12px; zoom: 0.95; font-weight: 400; } ul { padding: 0; margin: 0; list-style: none; display: flex; } ul li { width: 33%; display: inline-block; } .blank-line { margin-top: 6px; }',
+      style: '#print-container { padding-right: 4px; } div { word-break: break-all; font-size: 12px; zoom: 0.95; font-weight: 400; } ul { padding: 0; margin: 0; list-style: none; display: flex; } ul li { display: inline-block; } ul li:nth-child(1) { width: 50%; } ul li:nth-child(2) { width: 30%; } ul li:nth-child(3) { width: 20%; } .blank-line { margin-top: 10px; }',
       header: this.options.header,
       headerStyle: 'font-size: 12px;',
       scanStyles: false,
